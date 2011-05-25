@@ -1,3 +1,3 @@
 #!/bin/bash
 
-python merge.py 406 src
+python merge.py 41 src
