@@ -3,49 +3,7 @@ TILED TILESET LAYER BAKER
 bakes together layers of tiles created by Tiled Map Editor
 http://www.mapeditor.org/
 
-can bake layers from more level(tmx) files, the only condition is that all the level files uses the same original tileset
+see https://github.com/falanxia/tileset_baker/wiki
 
 
-Example is included
 
-
-PREREQUISITES
-
-install python 2.7 from
-http://www.python.org/getit/
-
-install python pil library (pkg python-imaging) from
-http://www.pythonware.com/products/pil/
-
-for debian like OS:
-`sudo apt-get install python python-imaging`
-
-
-USAGE
-
-Source files go to "src" folder
-Source TMX files has to be in XML format only
-
-Execute "merge.py" within a python interpreter with following arguments:
-`./python merge.py first_colliding_tile [src_dir]`
-
-param first_colliding_tile is an integer - a position of the first colliding tile in original tileset
-optional param src_dir is a source directory relative from merge.py directory (default "./src")
-
-Output files are created in "output" folder
-folder is not emptied on execution, but is created if does not exist
-
-tileset baker adds attribute collision_tile to every level file with integer value - a position of the first colliding tile in the new tileset
-
-e.g. output/mapa1.tmx:
-`<map height="30" orientation="orthogonal" tileheight="32" tilewidth="32" version="1.0" width="14">
- <tileset collision_tile="101" firstgid="1" name="tiles32" tileheight="32" tilewidth="32">`
-
-
-NOTES
-
-baker comes with linux and win executable bash files:
-`merge.sh`
-`winmerge.bat`
-
-executable by doubleclick and including necessary argument of first colliding tile and path to python interpreter. fell free to modify them according to your configuration and original tileset
