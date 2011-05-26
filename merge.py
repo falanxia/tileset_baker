@@ -194,6 +194,7 @@ class Composer():
         self.final.width = tiles_in_width * self.lmap.tile_set.tile_width
 
         if self.final.width > self.TITLESET_MAX_WIDTH:
+            print 'new baked tileset will be larger than 1024x1024px'
             # deleni na cela cisla
             tiles_in_width = self.TITLESET_MAX_WIDTH / self.lmap.tile_set.tile_width
             self.final.width = tiles_in_width * self.lmap.tile_set.tile_width
